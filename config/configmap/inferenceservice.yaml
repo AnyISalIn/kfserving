@@ -31,6 +31,10 @@ data:
         "triton": {
             "image": "nvcr.io/nvidia/tritonserver",
             "defaultImageVersion": "20.03-py3"
+        },
+        "openscoring": {
+            "image": "goeldicloud/openscoring",
+            "defaultImageVersion": "latest"
         }
     }
   transformers: |-

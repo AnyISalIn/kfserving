@@ -120,6 +120,8 @@ type PredictorSpec struct {
 	ONNX *ONNXSpec `json:"onnx,omitempty"`
 	// Spec for PyTorch predictor
 	PyTorch *PyTorchSpec `json:"pytorch,omitempty"`
+	// Spec for OpenScoring predictor
+	OpenScoring *OpenScoringSpec `json:"openscoring,omitempty"`
 
 	DeploymentSpec `json:",inline"`
 }
@@ -229,6 +231,13 @@ type PyTorchSpec struct {
 	RuntimeVersion string `json:"runtimeVersion,omitempty"`
 	// Defaults to requests and limits of 1CPU, 2Gb MEM.
 	Resources v1.ResourceRequirements `json:"resources,omitempty"`
+}
+
+// OpenScoringSpec defines arguments for configuring OpenScoring model serving.
+type OpenScoringSpec struct {
+	StorageURI     string                  `json:"storageUri"`
+	RuntimeVersion string                  `json:"runtimeVersion,omitempty"`
+	Resources      v1.ResourceRequirements `json:"resources,omitempty"`
 }
 
 // CustomSpec provides a hook for arbitrary container configuration.

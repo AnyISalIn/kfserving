@@ -55,12 +55,13 @@ type PredictorConfig struct {
 
 // +k8s:openapi-gen=false
 type PredictorsConfig struct {
-	Tensorflow PredictorConfig `json:"tensorflow,omitempty"`
-	Triton     PredictorConfig `json:"triton,omitempty"`
-	Xgboost    PredictorConfig `json:"xgboost,omitempty"`
-	SKlearn    PredictorConfig `json:"sklearn,omitempty"`
-	PyTorch    PredictorConfig `json:"pytorch,omitempty"`
-	ONNX       PredictorConfig `json:"onnx,omitempty"`
+	Tensorflow  PredictorConfig `json:"tensorflow,omitempty"`
+	Triton      PredictorConfig `json:"triton,omitempty"`
+	Xgboost     PredictorConfig `json:"xgboost,omitempty"`
+	SKlearn     PredictorConfig `json:"sklearn,omitempty"`
+	PyTorch     PredictorConfig `json:"pytorch,omitempty"`
+	ONNX        PredictorConfig `json:"onnx,omitempty"`
+	OpenScoring PredictorConfig `json:"openscoring,omitempty"`
 }
 
 // +k8s:openapi-gen=false

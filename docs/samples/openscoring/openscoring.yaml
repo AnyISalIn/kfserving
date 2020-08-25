@@ -1,0 +1,9 @@
+apiVersion: "serving.kubeflow.org/v1alpha2"
+kind: "InferenceService"
+metadata:
+  name: "openscoring-sample"
+spec:
+  default:
+    predictor:
+      openscoring:
+        storageUri: "https://raw.githubusercontent.com/pmservice/wml-sample-models/master/pmml/iris-species/model/iris_chaid.xml"

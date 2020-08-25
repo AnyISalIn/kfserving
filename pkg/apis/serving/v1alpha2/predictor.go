@@ -108,6 +108,9 @@ func getPredictor(predictorSpec *PredictorSpec) (Predictor, error) {
 	if predictorSpec.Triton != nil {
 		predictors = append(predictors, predictorSpec.Triton)
 	}
+	if predictorSpec.OpenScoring != nil {
+		predictors = append(predictors, predictorSpec.OpenScoring)
+	}
 	if len(predictors) != 1 {
 		err := fmt.Errorf(ExactlyOnePredictorViolatedError)
 		klog.Error(err)
